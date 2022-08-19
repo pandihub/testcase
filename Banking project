@@ -1,0 +1,80 @@
+
+import java.util.*;
+
+ public class Banking {
+	long accNo;
+	int empId;
+	long adharNo;
+	String empName;
+	long salary;
+	Banking(int empId, long accNo,long adharNo,String empName,long salary)
+		{
+		this.empId=empId;
+		this.accNo=accNo;
+		this.adharNo=adharNo;
+		this.empName=empName;
+		this.salary=salary;
+		
+		}
+		public int getEmpId()
+		{
+			return empId;
+		}
+		public long getAccNo() 
+		{
+			return accNo;
+		}
+		public long getAdharNo()
+		{
+			return adharNo;
+		}
+		public String getEmpName()
+		{
+			return empName;
+		}
+		public long getSalary()
+		{
+		return salary;
+		}
+		
+	public static void main(String[] args) {
+		Collection<Banking> c = new ArrayList<Banking>();
+		Scanner sc = new Scanner(System.in);
+		int a;
+		int id = 54;
+		long accountnumber = 856412379;
+		do{
+		System.out.println("Please choose your option");
+		System.out.println("1 : New Bank account");
+		System.out.println("2 : Add money");
+		System.out.println("3 : withdrawal");
+		System.out.println("4 : balance enquiry");
+		a = sc.nextInt();
+		switch(a) {
+		case 1:
+			System.out.println("Please enter your full name");
+			String empName = sc.next();
+//			sc.nextInt();
+			System.out.println("enter your adhar number");
+			long adharNo = sc.nextInt();
+	//		sc.nextInt();
+			accountnumber += 1;
+
+			System.out.println("your new Account number is " + accountnumber);
+				id +=1;
+			c.add(new Banking(id,accountnumber,adharNo,empName,30000));
+			System.out.println("");
+			System.out.println("****please contiue for money transaction******* ");
+			break;
+//		case 2:
+	//		System.out.println("please enter your Account Number");
+		//	long accNo = sc.nextInt();
+			//	accountnumber == accNo;
+				
+			default:
+				System.out.println("Kindly choose the given option");
+		}
+		}while(true);
+	}}
+	
+
